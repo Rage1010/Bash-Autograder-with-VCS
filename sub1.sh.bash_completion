@@ -1,0 +1,7 @@
+_sub1_sh() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    # Replace "options" with the appropriate list of options you want to provide autofill for
+    COMPREPLY=($(compgen -W "combine total git_init git_commit git_checkout update fetch grade statistics git_log" -- "$cur"))
+}
+
+complete -F _sub1_sh sub1.sh
